@@ -1,0 +1,20 @@
+<div class="container my-5 d-flex flex-column gap-3">
+  <h1>CustomProgressBarComponent</h1>
+
+  <h5>Básico (value + color)</h5>
+  <app-custom-progress-bar [value]="25" />
+  <app-custom-progress-bar [value]="50" color="success" />
+
+  <h5>Ampliación</h5>
+  <app-custom-progress-bar [value]="60" color="info" [showLabel]="true" />
+  <app-custom-progress-bar [value]="75" color="warning" [striped]="true" [showLabel]="true" />
+  <app-custom-progress-bar [value]="90" color="danger" [animated]="true" [height]="30" [showLabel]="true" />
+  <app-custom-progress-bar [value]="150" color="dark" [showLabel]="true" />
+
+  <h5>Interactivo</h5>
+  <app-custom-progress-bar [value]="progreso()" color="primary" [striped]="true" [showLabel]="true" [height]="25" />
+  <div class="d-flex gap-2">
+    <button class="btn btn-outline-secondary" (click)="sumar(-10)">-10%</button>
+    <button class="btn btn-outline-primary" (click)="sumar(10)">+10%</button>
+  </div>
+</div>
